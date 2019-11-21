@@ -49,7 +49,7 @@
 #
 # The server-based syntax can be used to override options:
 # ------------------------------------
-server "example.com", user: "user_name", roles: %w{web app}
+server '95.213.236.55', user: 'deploy', roles: %w{web app db}
 
 set :rbenv_type, :user
 set :branch, :master
