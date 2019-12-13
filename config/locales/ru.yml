@@ -1,0 +1,14 @@
+ru:
+  active_admin:
+    move: Переместить
+  activerecord:
+    attributes:
+      admin_user:
+        current_sign_in_at: Время логина
+        sign_in_count: Количество логинов
+        created_at: Создано
+    models:
+      admin_user: Пользователи
+    errors:
+      messages:
+        record_invalid: Отсутствует запись
