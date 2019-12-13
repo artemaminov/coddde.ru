@@ -1,0 +1,7 @@
+<article class="article">
+  <h2><%= post.title %></h2>
+  <p class="article__spoiler"><%= post.announce %></p>
+  <span class="article__author"><%= post.author %></span>
+  <span class="article__date"><%= post.created_at %></span>
+  <span class="article__tags"><%= render partial: 'shared/tags', locals: { tags: post.tags } %></span>
+</article>
