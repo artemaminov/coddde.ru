@@ -10,6 +10,27 @@
   </head>
 
   <body>
-    <%= yield %>
+  <header class="header" style="background-image: url(<%= asset_url "header-bg-blog" %>)">
+    <div class="content">
+      <a class="logo logo-coddde" href="#"></a>
+      <span class="spacer"></span>
+    </div>
+  </header>
+  <main class="main">
+    <div class="content">
+      <div class="content__list">
+        <h1>Блог</h1>
+        <%= yield %>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="content">
+      <div class="links">
+        <span class="logo logo-github"></span>
+      </div>
+      <span class="copyright"></span>
+    </div>
+  </footer>
   </body>
 </html>
