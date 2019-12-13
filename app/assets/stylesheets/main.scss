@@ -1,0 +1,127 @@
+@import "variables";
+
+.logo {
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+}
+
+html {
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: $bg-grey;
+    .content {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      //max-width: 1360px;
+      padding: 0 40px;
+      margin: 0 auto;
+    }
+    header {
+      background-color: $bg-grey;
+      background-repeat: no-repeat;
+      //background-size: 1000px;
+      //background-position: -60px 43%;
+      width: 100%;
+      //height: 400px;
+      border-bottom: 10px solid $selection;
+      .logo-coddde {
+        background-image: asset-url("logo-coddde");
+        //width: 140px;
+        //height: 120px;
+      }
+    }
+    main {
+      flex: 1;
+
+      .content__list {
+
+        h1 {
+          font: {
+            family: $main-font-bold;
+            size: 4em;
+            weight: 900;
+          }
+          padding: 1em 0 .5em;
+          max-width: 12em;
+        }
+
+        article {
+          width: 47em;
+          padding: 2em;
+          border-radius: 1em;
+          background-color: $dark-grey;
+          margin-bottom: 2em;
+
+          h2 {
+            font: {
+              family: $main-font-regular;
+              size: 2em;
+              weight: 200;
+            }
+          }
+
+          .article__date {
+            font: {
+              family: $main-font-regular;
+              size: .8em;
+              weight: 200;
+            }
+            margin-bottom: 1em;
+
+          }
+
+          .article__spoiler {
+            font: {
+              family: $main-font-regular;
+              weight: 400;
+            }
+            line-height: 1.5em;
+            padding: .8em 0 1em;
+            //font-size: 1.4rem;
+          }
+
+          .article__tags {
+            font: {
+              family: $main-font-regular;
+              size: .8em;
+              weight: 200;
+            }
+          }
+
+          .article__author {
+            font: {
+              family: $main-font-regular;
+              size: .8em;
+              weight: 900;
+            }
+          }
+        }
+      }
+    }
+    footer {
+      background-color: $bg-yellow;
+      //height: 120px;
+      .content {
+        .copyright {
+
+        }
+        .links {
+          .logo-github {
+            background-image: asset-url("logo-github");
+            //width: 100px;
+            //height: 60px;
+          }
+        }
+      }
+    }
+  }
+}
+
+::selection {
+  background: $selection;
+  color: $selection-text;
+}

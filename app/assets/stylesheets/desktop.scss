@@ -1,0 +1,39 @@
+@import "include-media";
+
+@include media('>=desktop', '<huge') {
+  html {
+    body {
+      display: grid;
+      flex-flow: column;
+
+      .content {
+        max-width: 1000px;
+      }
+
+      header {
+        background-size: 1000px;
+        background-position: -60px 43%;
+        height: 200px;
+
+        .logo-coddde {
+          width: 106px;
+          height: 91px;
+        }
+      }
+      footer {
+        height: 100px;
+        .content {
+          .copyright {
+
+          }
+          .links {
+            .logo-github {
+              width: 70px;
+              height: 33px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

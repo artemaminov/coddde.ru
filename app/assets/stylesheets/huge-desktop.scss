@@ -1,0 +1,55 @@
+@import "include-media";
+
+@include media('>=huge') {
+  html {
+    body {
+      display: grid;
+      flex-flow: column;
+
+      .content {
+        max-width: 1360px;
+      }
+
+      header {
+        background-size: 1000px;
+        background-position: -60px 43%;
+        height: 400px;
+
+        .logo-coddde {
+          width: 140px;
+          height: 120px;
+        }
+      }
+      main {
+        article {
+          .article__date {
+
+          }
+          .article__spoiler {
+            font-size: 1.4rem;
+          }
+          .article__tags {
+
+          }
+          .article__author {
+
+          }
+        }
+      }
+      footer {
+        height: 120px;
+        .content {
+          .copyright {
+
+          }
+          .links {
+            .logo-github {
+              width: 100px;
+              height: 60px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

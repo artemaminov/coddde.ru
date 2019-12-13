@@ -1,0 +1,56 @@
+@import "include-media";
+
+@include media('>=phone', '<desktop', 'retina3x') {
+  html {
+    body {
+      display: grid;
+      flex-flow: column;
+
+      .content {
+        max-width: 1000px;
+      }
+
+      header {
+        background-size: 620px;
+        background-position: -60px 43%;
+        height: 800px;
+
+        .logo-coddde {
+          width: 106px;
+          height: 90px;
+          margin: 0 auto;
+        }
+      }
+      main {
+        article {
+          .article__date {
+
+          }
+          .article__spoiler {
+            font-size: 4rem;
+          }
+          .article__tags {
+
+          }
+          .article__author {
+
+          }
+        }
+      }
+      footer {
+        height: 100px;
+        .content {
+          .copyright {
+
+          }
+          .links {
+            .logo-github {
+              width: 70px;
+              height: 33px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
