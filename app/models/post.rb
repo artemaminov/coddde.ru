@@ -1,7 +1,8 @@
 class Post < ApplicationRecord
   enum status: [ :draft, :rejected, :active ]
 
-  has_and_belongs_to_many :tags
+  has_many :tags, through: :post_tags
+  has_one_attached :hero_image
 
   accepts_nested_attributes_for :tags
 
