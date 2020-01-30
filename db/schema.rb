@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_29_151103) do
+ActiveRecord::Schema.define(version: 2020_01_30_194927) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -59,29 +59,21 @@ ActiveRecord::Schema.define(version: 2020_01_29_151103) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
-  create_table "post_tags_tables", force: :cascade do |t|
+  create_table "post_tags", force: :cascade do |t|
     t.integer "tag_id"
     t.integer "post_id"
-    t.index ["post_id"], name: "index_post_tags_tables_on_post_id"
-    t.index ["tag_id"], name: "index_post_tags_tables_on_tag_id"
+    t.index ["post_id"], name: "index_post_tags_on_post_id"
+    t.index ["tag_id"], name: "index_post_tags_on_tag_id"
   end
 
   create_table "posts", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "tags_id"
     t.string "author", null: false
     t.string "title", null: false
     t.text "announce", limit: 120
     t.text "body", null: false
     t.integer "status", default: 0
-    t.index ["tags_id"], name: "index_posts_on_tags_id"
-  end
-
-  create_table "posts_tags", id: false, force: :cascade do |t|
-    t.integer "post_id", null: false
-    t.integer "tag_id", null: false
-    t.index ["post_id", "tag_id"], name: "index_posts_tags_on_post_id_and_tag_id", unique: true
   end
 
   create_table "tags", force: :cascade do |t|
