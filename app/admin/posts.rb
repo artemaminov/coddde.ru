@@ -22,8 +22,8 @@ ActiveAdmin.register Post do
       f.input :title
       f.input :announce
       f.input :body
-      f.has_many :tags do
-        
+      f.has_many :tags, new_record: true do |t|
+        t.input :name
       end
     end
     f.actions
