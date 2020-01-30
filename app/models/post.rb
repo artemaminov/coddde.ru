@@ -1,6 +1,7 @@
 class Post < ApplicationRecord
   enum status: [ :draft, :rejected, :active ]
 
+  has_many :post_tags
   has_many :tags, through: :post_tags
   has_one_attached :hero_image
 
